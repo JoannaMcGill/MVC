@@ -10,36 +10,27 @@ public class Main extends Application
 {
 
   @Override
-  public void start(Stage stage) throws Exception
-  {
+  public void start(Stage stage) throws Exception {
 	  SimpleAdderModel model = new SimpleAdderModel();
+
+	  FXMLLoader loader = new FXMLLoader();
+	  loader.setLocation(Main.class.getResource("SimpleAdder.fxml"));
+	  BorderPane view = loader.load();
+    
+	  SimpleAdderController cont = loader.getController(); 
 	  
-
-
-//    model.getGroceries().add(new GroceryItem("cat",34d));
-    //model.getGroceries().add(new GroceryItem("dog",18d));
-    
-    FXMLLoader loader = new FXMLLoader();
-
-    loader.setLocation(Main.class.getResource("SimpleAdder.fxml"));
-
-    BorderPane view = loader.load();
-    
-    SimpleAdderController cont = loader.getController(); 
-    //ViewTransitionalModel vm = new ViewTransitionalModel(view,model);
-    cont.setModel(model);
-    
-    
-    Scene s = new Scene(view);
-    stage.setScene(s);
-    stage.show();
+	  model.setView(view);
+	  cont.setModel(model);
+	  model.showResult();
+	  
+	  Scene s = new Scene(view);
+	  stage.setScene(s);
+	  stage.show();
    }
 
   
-  public static void main(String [] args)
-  {
-	  //System.out.println("hello there");
-    launch(args);
+  public static void main(String [] args) {
+	  launch(args);
   }
   
 }
