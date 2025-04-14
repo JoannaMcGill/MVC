@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.SimpleAdderController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.SimpleAdderController">
    <top>
       <Label alignment="CENTER" prefHeight="62.0" prefWidth="181.0" text="2 Number Adder" BorderPane.alignment="CENTER" />
    </top>
@@ -18,7 +18,7 @@
             <TextField fx:id="num2" />
             <Label text="=" />
             <Label fx:id="sum" text="0" />
-            <Button mnemonicParsing="false" onAction="#onClickCalculate" text="Calculate" />
+            <Button id="calculateButton" mnemonicParsing="false" onAction="#onClickCalculate" text="Calculate" />
          </children>
       </HBox>
    </center>
