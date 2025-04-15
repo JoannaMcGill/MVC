@@ -9,7 +9,7 @@ public class SimpleAdderController {
 	@FXML private TextField num1;
 	@FXML private TextField num2;
 	@FXML private Label sum;
-	//@FXML private Button calculateButton;
+	//@FXML private Button calcButton;
   
    //converts text from FXML to double
    private double getAmt(TextField num) {
